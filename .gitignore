@@ -1,0 +1,13 @@
+*.o
+
+sdk/out
+gdb
+core-*
+*.DS_Store
+.gradle
+*build
+*.idea
+*.cxx
+local.properties
+cmake-build-debug/
+
