@@ -20,8 +20,8 @@ int main() {
     }
 
     // 键盘输入
-    cin >> str;
-    cout << "input value = " + str << endl;
+//    cin >> str;
+//    cout << "input value = " + str << endl;
 
     for (int i = 1; i < 10; ++i) {
         for (int j = 1; j <= i; ++j) {
@@ -29,5 +29,6 @@ int main() {
         }
         cout << endl;
     }
+
     return 0;
 }
