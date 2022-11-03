@@ -5,10 +5,19 @@ using namespace std;
 
 int main() {
 
-    char ch[] = "啊";
+    char ch[] = "abcd";
     string str = "哈啊哈";
+    char *names[4] = {
+            "Zara Ali",
+            "Hina Ali",
+            "Nuha Ali",
+            "Sara Ali",
+    };
 
-    cout << "Hello, World!" << sizeof ch << endl;
+    int ia = 32;
+    int *arr;
+    arr = &ia;
+    cout << "Hello, World!" << names << endl;
     cout << "Hello, World!" << str << endl;
 
     bool flag = false;
@@ -30,5 +39,7 @@ int main() {
         cout << endl;
     }
 
+
     return 0;
 }
+
