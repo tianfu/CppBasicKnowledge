@@ -8,21 +8,53 @@
 
 using namespace std;
 
-int main(){
+#define ZeroException "Division by zero condition!"
+
+int division(int a ,int b){
+    if(b == 0){
+        throw ZeroException;
+    }
+    return a/b;
+}
+int main() {
 
     string strName;
-//    char *fileName = "file.dat";
-    char fileName[] = "file.dat";
+    char *fileName = "./指针.md";
+    char data[100];
     strName = fileName;
 
     char *fName;
     fName = fileName;
 
+//    ofstream write;
+//    write.open(fileName);
+//    cin.getline(data, 100);
+//    write << data << endl;
+//    cin >> data;
+//    write << data << endl;
+//    write.close();
+//
+//    ifstream infile;
+//    infile.open(fileName);
+//    infile >> data;
+//    infile >> data;
+//    infile.close();
 
 //    int var = 200;
 //    int *intName;
 //    intName = &var;
 
-    cout << fName << endl;
+    int a = 0;
+    int b = 0;
+
+    try {
+        cin >> a ;
+        cin >> b ;
+        int i1 = division(a,b);
+        cout << i1 << endl;
+    } catch (const char *e){
+        cout << e << endl;
+    }
+
     return 0;
 }
