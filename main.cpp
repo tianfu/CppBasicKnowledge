@@ -36,22 +36,43 @@ inline const T& Max(const T& a,const T& b) {
 int BJMax(int a, int b) {
     return a < b ? b : a;
 }
+
+struct Student{
+    string name;
+    int score;
+};
 int main() {
 
-    cout << BJMax(6,4)<<endl;
-    char ch[] = "abcd";
-    string str = "哈啊哈";
-    char *names[4] = {
-            "Zara Ali",
-            "Hina Ali",
-            "Nuha Ali",
-            "Sara Ali",
-    };
+    struct Student s = {"哈哈",100};
+//    cout << __cplusplus << endl;
+//    cout << BJMax(6,4)<<endl;
+//    char ch[] = "abcd";
+//    string str = "哈啊哈";
+//    char *names[4] = {
+//            "Zara Ali",
+//            "Hina Ali",
+//            "Nuha Ali",
+//            "Sara Ali",
+//    };
+//
+//    Book* bok = new Book(4);
+//    bok->name = "haha";
+//    delete bok;
 
-    Book* bok = new Book(4);
-    bok->name = "haha";
-    delete bok;
-
+    int arr[5] = { 0, 1, 2, 3, 4 };
+    //数组的指针
+    int (*arrPtr)[5] = &arr;
+    //指针的数组
+    int *ptrArr[5] = { &arr[0], &arr[1], &arr[2], &arr[3], &arr[4] };
+    cout << "arrPtr: " << arrPtr << endl;
+    cout << "*arrPtr:" << *arrPtr << endl;
+    for (int i = 0; i < 5;i++)
+    {
+        cout << ( *arrPtr ) [i] << " ";
+        cout << arrPtr [i] << " ";
+        cout << ptrArr[i] << " ";
+        cout << *(ptrArr[i] ) << " "<< endl;
+    }
 
 //    Book lol(1);
 //    Book lol1(4);
